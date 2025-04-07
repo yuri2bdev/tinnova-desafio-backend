@@ -41,7 +41,7 @@ API RESTful com CRUD completo de veículos, incluindo filtros por marca, ano, st
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+git clone https://github.com/yuri2bdev/tinnova-desafio.git
 ```
 
 2. Navegue até a pasta do projeto:
@@ -90,7 +90,7 @@ src
 
 Você pode testar os endpoints da API utilizando a collection do Postman disponível neste repositório.
 
-👉 [Download da Collection](./postman/veiculos-api.postman_collection.json)
+👉 [Download da Collection](./postman/Desafio Tinnova.postman_collection.json)
 
 Importe no seu Postman e divirta-se! 🚀
 
