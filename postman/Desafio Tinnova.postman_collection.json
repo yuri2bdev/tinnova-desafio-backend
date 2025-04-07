@@ -1,0 +1,444 @@
+{
+	"info": {
+		"_postman_id": "0252e955-3612-4a2b-92e3-428f91431509",
+		"name": "Desafio Tinnova",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Veículos",
+			"item": [
+				{
+					"name": "Criar novo veículo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"veiculo\": \"Uno\",\n    \"marca\": \"FIAT\",\n    \"ano\": 1998,\n    \"descricao\": \"Compacto econômico\",\n    \"vendido\": false\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/veiculos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veiculos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar veículo (PATCH)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vendido\": false\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/veiculos/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veiculos",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar veículo (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"veiculo\": \"Fiat Uno Mille\",\n    \"marca\": \"Fiat\",\n    \"ano\": 1999,\n    \"descricao\": \"Atualizado\",\n    \"vendido\": true\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/veiculos/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veiculos",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar veículo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/veiculos/bfb4a0e7-cf63-4eeb-b766-104ea372b7cd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veiculos",
+								"bfb4a0e7-cf63-4eeb-b766-104ea372b7cd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter veículo por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/veiculos/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veiculos",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar todos os veículos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/veiculos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veiculos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Por Marca",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/veiculos/marca/Volkswagen",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veiculos",
+								"marca",
+								"Volkswagen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar por Década",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/veiculos/decada/2000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veiculos",
+								"decada",
+								"2000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar veículos recentes (7 dias)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/veiculos/ultima-semana",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veiculos",
+								"ultima-semana"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca por não vendidos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/veiculos/nao-vendidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veiculos",
+								"nao-vendidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca por ano",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/veiculos/ano/1998",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veiculos",
+								"ano",
+								"1998"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contagem por marca",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/veiculos/contagem-por-marca",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veiculos",
+								"contagem-por-marca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contagem por década",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/veiculos/contagem-por-decada",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veiculos",
+								"contagem-por-decada"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contagem de vaículos não vendidos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/veiculos/nao-vendidos/contagem",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veiculos",
+								"nao-vendidos",
+								"contagem"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Votos",
+			"item": [
+				{
+					"name": "Percentual de votos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"totalEleitores\": 1000,\n    \"votosValidos\": 800,\n    \"votosBrancos\": 150,\n    \"votosNulos\": 50\n  }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/desafios/votos/calcular",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"desafios",
+								"votos",
+								"calcular"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bubble",
+			"item": [
+				{
+					"name": "Ordenação com Bubble Sort",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[5, 3, 2, 4, 1]"
+						},
+						"url": {
+							"raw": "http://localhost:8080/desafios/bubble-sort",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"desafios",
+								"bubble-sort"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fatorial",
+			"item": [
+				{
+					"name": "Cálculo de Fatorial",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/desafios/fatorial/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"desafios",
+								"fatorial",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Múltiplos de 3 ou 5",
+			"item": [
+				{
+					"name": "Soma dos múltiplos de 3 ou 5 abaixo de um número",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/desafios/multiplos/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"desafios",
+								"multiplos",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
